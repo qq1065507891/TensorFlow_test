@@ -41,10 +41,10 @@ def read_and_decode(filename):
     image = tf.subtract(image, 0.5)
     image = tf.multiply(image, 2.0)
     # 获取 label
-    label0 = tf.cast(features['label0', tf.uint8])
-    label1 = tf.cast(features['label0', tf.uint8])
-    label2 = tf.cast(features['label0', tf.uint8])
-    label3 = tf.cast(features['label0', tf.uint8])
+    label0 = tf.cast(features['label0'], tf.int64)
+    label1 = tf.cast(features['label1'], tf.int64)
+    label2 = tf.cast(features['label2'], tf.int64)
+    label3 = tf.cast(features['label3'], tf.int64)
 
     return image,image_raw ,label0, label1, label2, label3
 
