@@ -99,7 +99,7 @@ def _convert_dataset(split_name, filenames, dataset_dir):
                     labels = filename.split('\\')[-1][0:4]
                     num_labels = []
                     for j in range(4):
-                        num_labels.append(label_[labels[j]])
+                        num_labels.append(int(label_[labels[j]]))
 
                     # 生成protocol数据类型
                     example = image_to_tfexample(image_data, num_labels[0], num_labels[1], num_labels[2], num_labels[3])
